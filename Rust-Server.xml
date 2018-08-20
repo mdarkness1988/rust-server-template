@@ -1,0 +1,186 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Rust-Server</Name>
+  <Repository>mdarkness1988/rust-server</Repository>
+  <Registry>https://hub.docker.com/r/mdarkness1988/rust-server/</Registry>
+  <Network>host</Network>
+  <MyIP/>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview>Fully customizable Rust Server at your fingertips. [br] &#xD;
+Set all of the settings below to suit your needs and save when you are ready. [br]  [br]&#xD;
+*  Is a requirement that Rust needs to startup. &#xD;
+&#xD;
+ &#xD;
+</Overview>
+  <Category/>
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+  <TemplateURL/>
+  <Icon>https://orig00.deviantart.net/f0bf/f/2014/018/9/6/rust___icon_by_blagoicons-d72pie6.png</Icon>
+  <ExtraParams>-m 16g --restart unless-stopped</ExtraParams>
+  <PostArgs>-m 16g</PostArgs>
+  <DateInstalled>1534801257</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Fully customizable Rust Server at your fingertips. [br] &#xD;
+Set all of the settings below to suit your needs and save when you are ready. [br]  [br]&#xD;
+*  Is a requirement that Rust needs to startup. &#xD;
+&#xD;
+ &#xD;
+</Description>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish>
+      <Port>
+        <HostPort>28015</HostPort>
+        <ContainerPort>28015</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>28016</HostPort>
+        <ContainerPort>28016</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>28016</HostPort>
+        <ContainerPort>28016</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/Rust-Server/</HostDir>
+      <ContainerDir>/steamcmd/rust</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value/>
+      <Name>RUST_SERVER_STARTUP_ARGUMENTS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>My-server</Value>
+      <Name>RUST_SERVER_IDENTITY</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>0</Value>
+      <Name>RUST_SERVER_SEED</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>My server</Value>
+      <Name>RUST_SERVER_NAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>RUST_SERVER_DESCRIPTION</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>changeme</Value>
+      <Name>RUST_RCON_PASSWORD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>1</Value>
+      <Name>RUST_UPDATE_CHECKING</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>public</Value>
+      <Name>RUST_UPDATE_BRANCH</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>0</Value>
+      <Name>RUST_OXIDE_ENABLED</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>1</Value>
+      <Name>RUST_OXIDE_UPDATE_ON_BOOT</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>3500</Value>
+      <Name>RUST_SERVER_WORLDSIZE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>200</Value>
+      <Name>RUST_SERVER_MAXPLAYERS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>300</Value>
+      <Name>RUST_SERVER_SAVE_INTERVAL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>1</Value>
+      <Name>RUST_RCON_WEB</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>RUST_SERVER_BANNER_URL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>STEAMUSER</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>STEAMPW</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>1</Value>
+      <Name>RUST_SERVER_SECURE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>-1</Value>
+      <Name>RUST_SERVER_FPS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>256</Value>
+      <Name>RUST_SERVER_UPDATEBATCH</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Rust Arguments" Target="RUST_SERVER_STARTUP_ARGUMENTS" Default="" Mode="" Description="Arguments on startup" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Server Identity " Target="RUST_SERVER_IDENTITY" Default="" Mode="" Description="Name the server folder will be titled.  No spaces" Type="Variable" Display="always" Required="true" Mask="false">My-server</Config>
+  <Config Name="Server Seed" Target="RUST_SERVER_SEED" Default="" Mode="" Description="Map Seed is what shapes your make the way you want it. &amp;lt;/br&amp;gt;&#13;&#10;Use online Rust seed generator for your server.  &amp;lt;/br&amp;gt;&#13;&#10;0 = will randomize the seed each time the map is deleted. " Type="Variable" Display="always" Required="true" Mask="false">0</Config>
+  <Config Name="Server Name" Target="RUST_SERVER_NAME" Default="" Mode="" Description="Server name that will appear on server listing" Type="Variable" Display="always" Required="true" Mask="false">My server</Config>
+  <Config Name="Server Description" Target="RUST_SERVER_DESCRIPTION" Default="" Mode="" Description="Server Description that will show up on server listing" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Rcon Password" Target="RUST_RCON_PASSWORD" Default="" Mode="" Description="Set a password to remote access the server" Type="Variable" Display="always" Required="false" Mask="false">changeme</Config>
+  <Config Name="Auto Update" Target="RUST_UPDATE_CHECKING" Default="" Mode="" Description="0 = Disabled &amp;lt;/br&amp;gt;&#13;&#10;1 = Enabled" Type="Variable" Display="always" Required="true" Mask="false">1</Config>
+  <Config Name="Server Type" Target="RUST_UPDATE_BRANCH" Default="public" Mode="" Description="public &amp;lt;/br&amp;gt;&#13;&#10;prerelease" Type="Variable" Display="always" Required="true" Mask="false">public</Config>
+  <Config Name="Oxide Enabled" Target="RUST_OXIDE_ENABLED" Default="0" Mode="" Description="0 = Disabled &amp;lt;/br&amp;gt;&#13;&#10;1 = Enabled &amp;lt;/br&amp;gt;&#13;&#10;This is if you want to use plugins on the server.&#13;&#10;" Type="Variable" Display="always" Required="true" Mask="false">0</Config>
+  <Config Name="Update Oxide On Boot" Target="RUST_OXIDE_UPDATE_ON_BOOT" Default="" Mode="" Description="0 = Disabled &amp;lt;/br&amp;gt;&#13;&#10;1 = Enabled" Type="Variable" Display="always" Required="true" Mask="false">1</Config>
+  <Config Name="World Size" Target="RUST_SERVER_WORLDSIZE" Default="3500" Mode="" Description="The size of the map that will be generate. " Type="Variable" Display="always" Required="true" Mask="false">3500</Config>
+  <Config Name="Max Players" Target="RUST_SERVER_MAXPLAYERS" Default="" Mode="" Description="Max amount of players that can play at once" Type="Variable" Display="always" Required="true" Mask="false">200</Config>
+  <Config Name="Server Save Intervals" Target="RUST_SERVER_SAVE_INTERVAL" Default="300" Mode="" Description="The time it take in seconds to save world data" Type="Variable" Display="always" Required="true" Mask="false">300</Config>
+  <Config Name="Rcon Web Enabled" Target="RUST_RCON_WEB" Default="1" Mode="" Description="0 = Disabled &amp;lt;/br&amp;gt;&#13;&#10;1 = Enabled" Type="Variable" Display="always" Required="true" Mask="false">1</Config>
+  <Config Name="Server Banner URL" Target="RUST_SERVER_BANNER_URL" Default="" Mode="" Description="Must be 512x256 and PNG file" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Steam Username" Target="STEAMUSER" Default="" Mode="" Description="Leave blank for anonymous login. &amp;lt;/br&amp;gt;&#13;&#10;Steam username (Cap Sensitive) " Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Steam Password" Target="STEAMPW" Default="" Mode="" Description="Enter a steam password if Steam Username has been entered. " Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Secure Server" Target="RUST_SERVER_SECURE" Default="1" Mode="" Description="1 = Enabled &amp;lt;/br&amp;gt;&#13;&#10;0 = Disabled&#13;&#10;" Type="Variable" Display="always" Required="true" Mask="false">1</Config>
+  <Config Name="Server FPS" Target="RUST_SERVER_FPS" Default="-1" Mode="" Description="Server FPS Settings.  &amp;lt;/br&amp;gt;&#13;&#10;-1 = No limit" Type="Variable" Display="always" Required="true" Mask="false">-1</Config>
+  <Config Name="Server Batch Update" Target="RUST_SERVER_UPDATEBATCH" Default="256" Mode="" Description="This value changes the update rate of objects/players in-game." Type="Variable" Display="always" Required="false" Mask="false">256</Config>
+  <Config Name="Server Port2" Target="28015" Default="" Mode="udp" Description="Container Port: " Type="Port" Display="advanced" Required="false" Mask="false">28015</Config>
+  <Config Name="Rcon Port1" Target="28016" Default="" Mode="tcp" Description="Container Port: " Type="Port" Display="advanced" Required="false" Mask="false">28016</Config>
+  <Config Name="Rcon Port2" Target="28016" Default="" Mode="udp" Description="Container Port: " Type="Port" Display="advanced" Required="false" Mask="false">28016</Config>
+  <Config Name="Rust Directory" Target="/steamcmd/rust" Default="/mnt/cache/appdata/Rust-Server/" Mode="rw" Description="Location we're you want the Rust directory to be saved for easier access. " Type="Path" Display="advanced" Required="true" Mask="false">/mnt/cache/appdata/Rust-Server/</Config>
+</Container>
