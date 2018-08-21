@@ -20,7 +20,7 @@ Set all of the settings below to suit your needs and save when you are ready. [b
   <Icon>https://orig00.deviantart.net/f0bf/f/2014/018/9/6/rust___icon_by_blagoicons-d72pie6.png</Icon>
   <ExtraParams>-m 16g --restart unless-stopped</ExtraParams>
   <PostArgs>-m 16g</PostArgs>
-  <DateInstalled>1534801257</DateInstalled>
+  <DateInstalled>1534824588</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Description>Fully customizable Rust Server at your fingertips. [br] &#xD;
@@ -157,6 +157,11 @@ Set all of the settings below to suit your needs and save when you are ready. [b
       <Name>RUST_SERVER_UPDATEBATCH</Name>
       <Mode/>
     </Variable>
+    <Variable>
+      <Value>1</Value>
+      <Name>UPNP</Name>
+      <Mode/>
+    </Variable>
   </Environment>
   <Labels/>
   <Config Name="Rust Arguments" Target="RUST_SERVER_STARTUP_ARGUMENTS" Default="" Mode="" Description="Arguments on startup" Type="Variable" Display="always" Required="false" Mask="false"/>
@@ -179,6 +184,7 @@ Set all of the settings below to suit your needs and save when you are ready. [b
   <Config Name="Secure Server" Target="RUST_SERVER_SECURE" Default="1" Mode="" Description="1 = Enabled &amp;lt;/br&amp;gt;&#13;&#10;0 = Disabled&#13;&#10;" Type="Variable" Display="always" Required="true" Mask="false">1</Config>
   <Config Name="Server FPS" Target="RUST_SERVER_FPS" Default="-1" Mode="" Description="Server FPS Settings.  &amp;lt;/br&amp;gt;&#13;&#10;-1 = No limit" Type="Variable" Display="always" Required="true" Mask="false">-1</Config>
   <Config Name="Server Batch Update" Target="RUST_SERVER_UPDATEBATCH" Default="256" Mode="" Description="This value changes the update rate of objects/players in-game." Type="Variable" Display="always" Required="false" Mask="false">256</Config>
+  <Config Name="Auto Port Forwarding" Target="UPNP" Default="1" Mode="" Description="1 = Enabled &amp;lt;/br&amp;gt;&#13;&#10;0 = Disabled &amp;lt;/br&amp;gt;&#13;&#10;Turn this feature on to automatically open your ports on your router to access the game outside your network. &amp;lt;/br&amp;gt;&#13;&#10;NOTE: This only works with routers that support (UPnP) " Type="Variable" Display="always" Required="true" Mask="false">1</Config>
   <Config Name="Server Port2" Target="28015" Default="" Mode="udp" Description="Container Port: " Type="Port" Display="advanced" Required="false" Mask="false">28015</Config>
   <Config Name="Rcon Port1" Target="28016" Default="" Mode="tcp" Description="Container Port: " Type="Port" Display="advanced" Required="false" Mask="false">28016</Config>
   <Config Name="Rcon Port2" Target="28016" Default="" Mode="udp" Description="Container Port: " Type="Port" Display="advanced" Required="false" Mask="false">28016</Config>
