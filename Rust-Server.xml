@@ -6,7 +6,7 @@
   <Network>host</Network>
   <MyIP/>
   <Privileged>false</Privileged>
-  <Support/>
+  <Support>https://mdarkness1988.github.io/Rust-Server/</Support>
   <Project/>
   <Overview>Fully customizable Rust Server at your fingertips. [br] &#xD;
 Set all of the settings below to suit your needs and save when you are ready. [br]  [br]&#xD;
@@ -20,7 +20,7 @@ Set all of the settings below to suit your needs and save when you are ready. [b
   <Icon>https://orig00.deviantart.net/f0bf/f/2014/018/9/6/rust___icon_by_blagoicons-d72pie6.png</Icon>
   <ExtraParams>-m 16g --restart unless-stopped</ExtraParams>
   <PostArgs>-m 16g</PostArgs>
-  <DateInstalled>1534824588</DateInstalled>
+  <DateInstalled>1534888729</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Description>Fully customizable Rust Server at your fingertips. [br] &#xD;
@@ -43,9 +43,14 @@ Set all of the settings below to suit your needs and save when you are ready. [b
         <Protocol>tcp</Protocol>
       </Port>
       <Port>
-        <HostPort>28016</HostPort>
-        <ContainerPort>28016</ContainerPort>
-        <Protocol>udp</Protocol>
+        <HostPort>28015</HostPort>
+        <ContainerPort>28015</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
       </Port>
     </Publish>
   </Networking>
@@ -63,7 +68,7 @@ Set all of the settings below to suit your needs and save when you are ready. [b
       <Mode/>
     </Variable>
     <Variable>
-      <Value>My-server</Value>
+      <Value>My-server-file</Value>
       <Name>RUST_SERVER_IDENTITY</Name>
       <Mode/>
     </Variable>
@@ -73,7 +78,7 @@ Set all of the settings below to suit your needs and save when you are ready. [b
       <Mode/>
     </Variable>
     <Variable>
-      <Value>My server</Value>
+      <Value>My server name</Value>
       <Name>RUST_SERVER_NAME</Name>
       <Mode/>
     </Variable>
@@ -165,9 +170,9 @@ Set all of the settings below to suit your needs and save when you are ready. [b
   </Environment>
   <Labels/>
   <Config Name="Rust Arguments" Target="RUST_SERVER_STARTUP_ARGUMENTS" Default="" Mode="" Description="Arguments on startup" Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="Server Identity " Target="RUST_SERVER_IDENTITY" Default="" Mode="" Description="Name the server folder will be titled.  No spaces" Type="Variable" Display="always" Required="true" Mask="false">My-server</Config>
+  <Config Name="Server Identity " Target="RUST_SERVER_IDENTITY" Default="" Mode="" Description="Name the server folder will be titled.  No spaces" Type="Variable" Display="always" Required="true" Mask="false">My-server-file</Config>
   <Config Name="Server Seed" Target="RUST_SERVER_SEED" Default="" Mode="" Description="Map Seed is what shapes your make the way you want it. &amp;lt;/br&amp;gt;&#13;&#10;Use online Rust seed generator for your server.  &amp;lt;/br&amp;gt;&#13;&#10;0 = will randomize the seed each time the map is deleted. " Type="Variable" Display="always" Required="true" Mask="false">0</Config>
-  <Config Name="Server Name" Target="RUST_SERVER_NAME" Default="" Mode="" Description="Server name that will appear on server listing" Type="Variable" Display="always" Required="true" Mask="false">My server</Config>
+  <Config Name="Server Name" Target="RUST_SERVER_NAME" Default="" Mode="" Description="Server name that will appear on server listing" Type="Variable" Display="always" Required="true" Mask="false">My server name</Config>
   <Config Name="Server Description" Target="RUST_SERVER_DESCRIPTION" Default="" Mode="" Description="Server Description that will show up on server listing" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Rcon Password" Target="RUST_RCON_PASSWORD" Default="" Mode="" Description="Set a password to remote access the server" Type="Variable" Display="always" Required="false" Mask="false">changeme</Config>
   <Config Name="Auto Update" Target="RUST_UPDATE_CHECKING" Default="" Mode="" Description="0 = Disabled &amp;lt;/br&amp;gt;&#13;&#10;1 = Enabled" Type="Variable" Display="always" Required="true" Mask="false">1</Config>
@@ -185,8 +190,9 @@ Set all of the settings below to suit your needs and save when you are ready. [b
   <Config Name="Server FPS" Target="RUST_SERVER_FPS" Default="-1" Mode="" Description="Server FPS Settings.  &amp;lt;/br&amp;gt;&#13;&#10;-1 = No limit" Type="Variable" Display="always" Required="true" Mask="false">-1</Config>
   <Config Name="Server Batch Update" Target="RUST_SERVER_UPDATEBATCH" Default="256" Mode="" Description="This value changes the update rate of objects/players in-game." Type="Variable" Display="always" Required="false" Mask="false">256</Config>
   <Config Name="Auto Port Forwarding" Target="UPNP" Default="1" Mode="" Description="1 = Enabled &amp;lt;/br&amp;gt;&#13;&#10;0 = Disabled &amp;lt;/br&amp;gt;&#13;&#10;Turn this feature on to automatically open your ports on your router to access the game outside your network. &amp;lt;/br&amp;gt;&#13;&#10;NOTE: This only works with routers that support (UPnP) " Type="Variable" Display="always" Required="true" Mask="false">1</Config>
-  <Config Name="Server Port2" Target="28015" Default="" Mode="udp" Description="Container Port: " Type="Port" Display="advanced" Required="false" Mask="false">28015</Config>
-  <Config Name="Rcon Port1" Target="28016" Default="" Mode="tcp" Description="Container Port: " Type="Port" Display="advanced" Required="false" Mask="false">28016</Config>
-  <Config Name="Rcon Port2" Target="28016" Default="" Mode="udp" Description="Container Port: " Type="Port" Display="advanced" Required="false" Mask="false">28016</Config>
+  <Config Name="Server Port1" Target="28015" Default="" Mode="udp" Description="Container Port: " Type="Port" Display="advanced" Required="false" Mask="false">28015</Config>
+  <Config Name="Rcon Port" Target="28016" Default="" Mode="tcp" Description="Container Port: " Type="Port" Display="advanced" Required="false" Mask="false">28016</Config>
+  <Config Name="Server Port2" Target="28015" Default="" Mode="tcp" Description="Container Port: " Type="Port" Display="advanced" Required="false" Mask="false">28015</Config>
   <Config Name="Rust Directory" Target="/steamcmd/rust" Default="/mnt/cache/appdata/Rust-Server/" Mode="rw" Description="Location we're you want the Rust directory to be saved for easier access. " Type="Path" Display="advanced" Required="true" Mask="false">/mnt/cache/appdata/Rust-Server/</Config>
+  <Config Name="Web Port" Target="8080" Default="8080" Mode="tcp" Description="Web host for Rcon" Type="Port" Display="advanced" Required="false" Mask="false">8080</Config>
 </Container>
