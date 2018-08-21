@@ -14,7 +14,7 @@ Set all of the settings below to suit your needs and save when you are ready. [b
 &#xD;
  &#xD;
 </Overview>
-  <Category/>
+  <Category>Game</Category>
   <WebUI>http://[IP]:[PORT:8080]/</WebUI>
   <TemplateURL/>
   <Icon>https://orig00.deviantart.net/f0bf/f/2014/018/9/6/rust___icon_by_blagoicons-d72pie6.png</Icon>
