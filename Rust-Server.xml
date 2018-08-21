@@ -14,7 +14,7 @@ Set all of the settings below to suit your needs and save when you are ready. [b
 &#xD;
  &#xD;
 </Overview>
-  <Category>Game</Category>
+  <Category/>
   <WebUI>http://[IP]:[PORT:8080]/</WebUI>
   <TemplateURL/>
   <Icon>https://orig00.deviantart.net/f0bf/f/2014/018/9/6/rust___icon_by_blagoicons-d72pie6.png</Icon>
@@ -170,17 +170,17 @@ Set all of the settings below to suit your needs and save when you are ready. [b
   </Environment>
   <Labels/>
   <Config Name="Rust Arguments" Target="RUST_SERVER_STARTUP_ARGUMENTS" Default="" Mode="" Description="Arguments on startup" Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="Server Identity " Target="RUST_SERVER_IDENTITY" Default="" Mode="" Description="Name the server folder will be titled.  No spaces" Type="Variable" Display="always" Required="true" Mask="false">My-server-file</Config>
-  <Config Name="Server Seed" Target="RUST_SERVER_SEED" Default="" Mode="" Description="Map Seed is what shapes your make the way you want it. &amp;lt;/br&amp;gt;&#13;&#10;Use online Rust seed generator for your server.  &amp;lt;/br&amp;gt;&#13;&#10;0 = will randomize the seed each time the map is deleted. " Type="Variable" Display="always" Required="true" Mask="false">0</Config>
-  <Config Name="Server Name" Target="RUST_SERVER_NAME" Default="" Mode="" Description="Server name that will appear on server listing" Type="Variable" Display="always" Required="true" Mask="false">My server name</Config>
-  <Config Name="Server Description" Target="RUST_SERVER_DESCRIPTION" Default="" Mode="" Description="Server Description that will show up on server listing" Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="Rcon Password" Target="RUST_RCON_PASSWORD" Default="" Mode="" Description="Set a password to remote access the server" Type="Variable" Display="always" Required="false" Mask="false">changeme</Config>
-  <Config Name="Auto Update" Target="RUST_UPDATE_CHECKING" Default="" Mode="" Description="0 = Disabled &amp;lt;/br&amp;gt;&#13;&#10;1 = Enabled" Type="Variable" Display="always" Required="true" Mask="false">1</Config>
+  <Config Name="Server Identity " Target="RUST_SERVER_IDENTITY" Default="My-server-file" Mode="" Description="Name the server folder will be titled.  No spaces" Type="Variable" Display="always" Required="true" Mask="false">My-server-file</Config>
+  <Config Name="Server Seed" Target="RUST_SERVER_SEED" Default="0" Mode="" Description="Map Seed is what shapes your make the way you want it. &amp;lt;/br&amp;gt;&#13;&#10;Use online Rust seed generator for your server.  &amp;lt;/br&amp;gt;&#13;&#10;0 = will randomize the seed each time the map is deleted. " Type="Variable" Display="always" Required="true" Mask="false">0</Config>
+  <Config Name="Server Name" Target="RUST_SERVER_NAME" Default="My rust server" Mode="" Description="Server name that will appear on server listing" Type="Variable" Display="always" Required="true" Mask="false">My server name</Config>
+  <Config Name="Server Description" Target="RUST_SERVER_DESCRIPTION" Default="My server info" Mode="" Description="Server Description that will show up on server listing" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Rcon Password" Target="RUST_RCON_PASSWORD" Default="changeme" Mode="" Description="Set a password to remote access the server" Type="Variable" Display="always" Required="false" Mask="false">changeme</Config>
+  <Config Name="Auto Update" Target="RUST_UPDATE_CHECKING" Default="1" Mode="" Description="0 = Disabled &amp;lt;/br&amp;gt;&#13;&#10;1 = Enabled" Type="Variable" Display="always" Required="true" Mask="false">1</Config>
   <Config Name="Server Type" Target="RUST_UPDATE_BRANCH" Default="public" Mode="" Description="public &amp;lt;/br&amp;gt;&#13;&#10;prerelease" Type="Variable" Display="always" Required="true" Mask="false">public</Config>
   <Config Name="Oxide Enabled" Target="RUST_OXIDE_ENABLED" Default="0" Mode="" Description="0 = Disabled &amp;lt;/br&amp;gt;&#13;&#10;1 = Enabled &amp;lt;/br&amp;gt;&#13;&#10;This is if you want to use plugins on the server.&#13;&#10;" Type="Variable" Display="always" Required="true" Mask="false">0</Config>
-  <Config Name="Update Oxide On Boot" Target="RUST_OXIDE_UPDATE_ON_BOOT" Default="" Mode="" Description="0 = Disabled &amp;lt;/br&amp;gt;&#13;&#10;1 = Enabled" Type="Variable" Display="always" Required="true" Mask="false">1</Config>
+  <Config Name="Update Oxide On Boot" Target="RUST_OXIDE_UPDATE_ON_BOOT" Default="1" Mode="" Description="0 = Disabled &amp;lt;/br&amp;gt;&#13;&#10;1 = Enabled" Type="Variable" Display="always" Required="true" Mask="false">1</Config>
   <Config Name="World Size" Target="RUST_SERVER_WORLDSIZE" Default="3500" Mode="" Description="The size of the map that will be generate. " Type="Variable" Display="always" Required="true" Mask="false">3500</Config>
-  <Config Name="Max Players" Target="RUST_SERVER_MAXPLAYERS" Default="" Mode="" Description="Max amount of players that can play at once" Type="Variable" Display="always" Required="true" Mask="false">200</Config>
+  <Config Name="Max Players" Target="RUST_SERVER_MAXPLAYERS" Default="20" Mode="" Description="Max amount of players that can play at once" Type="Variable" Display="always" Required="true" Mask="false">200</Config>
   <Config Name="Server Save Intervals" Target="RUST_SERVER_SAVE_INTERVAL" Default="300" Mode="" Description="The time it take in seconds to save world data" Type="Variable" Display="always" Required="true" Mask="false">300</Config>
   <Config Name="Rcon Web Enabled" Target="RUST_RCON_WEB" Default="1" Mode="" Description="0 = Disabled &amp;lt;/br&amp;gt;&#13;&#10;1 = Enabled" Type="Variable" Display="always" Required="true" Mask="false">1</Config>
   <Config Name="Server Banner URL" Target="RUST_SERVER_BANNER_URL" Default="" Mode="" Description="Must be 512x256 and PNG file" Type="Variable" Display="always" Required="false" Mask="false"/>
