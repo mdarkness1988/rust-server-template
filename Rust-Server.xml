@@ -23,7 +23,7 @@ Simple Template for faster setup (Great for newbies).  &#xD;
   <Icon>https://orig00.deviantart.net/f0bf/f/2014/018/9/6/rust___icon_by_blagoicons-d72pie6.png</Icon>
   <ExtraParams>-m 16g --restart unless-stopped</ExtraParams>
   <PostArgs>-m 16</PostArgs>
-  <DateInstalled>1535077400</DateInstalled>
+  <Date>2018-08-25</Date>
   <DonateText/>
   <DonateLink/>
   <Description>Fully customizable Rust Server at your fingertips. [br] &#xD;
