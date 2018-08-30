@@ -26,8 +26,7 @@ Enable option to show wiped date in server title.  &#xD;
   <ExtraParams>-m 16g --restart unless-stopped</ExtraParams>
   <PostArgs>-m 16</PostArgs>
   <Date>2018-08-30</Date>
-  <DonateText/>
-  <DonateLink>"https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=GN7PRENKSZ8H2"</DonateLink>
+  <DonateText>Any Donations will be appriciated</DonateText> <DonateLink>https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;amp;hosted_button_id=GN7PRENKSZ8H2</DonateLink>
   <Description>Fully customizable Rust Server at your fingertips. [br] &#xD;
 Set all of the settings below to suit your needs and save when you are ready. [br]  [br]&#xD;
 Features: [br] &#xD;
