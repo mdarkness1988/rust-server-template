@@ -14,6 +14,8 @@ Features: [br] &#xD;
 Automatic updating system with wipe.  [br] &#xD;
 Auto Port forwarding (UPnP).  [br] &#xD;
 Simple Template for faster setup (Great for newbies).  &#xD;
+Auto announcements, upto 5 messages to set.  &#xD;
+Enable option to show wioed date in server title.  &#xD;
 &#xD;
  &#xD;
 </Overview>
@@ -208,7 +210,10 @@ Enable option to show wioed date in server title.  &#xD;
   </Environment>
   <Labels/>
   <Config Name="Public" Target="PUBLIC" Default="1" Mode="" Description="1 = Yes &amp;lt;/br&amp;gt; &#13;&#10;0 = No &amp;lt;/br&amp;gt;&#13;&#10;Be accessible online. &amp;lt;/br&amp;gt;&#13;&#10;Will automatically port forward your router. (UPnP) " Type="Variable" Display="always" Required="true" Mask="false">1</Config>
+ <Config Name="PVE" Target="PVE" Default="0" Mode="" Description="1 = Enabled  (Player Vs Entities) &amp;lt;/br&amp;gt;&#13;&#10;0 = Disabled (Player Vs Player) " Type="Variable" Display="always" Required="true" Mask="false">0</Config>
   <Config Name="Auto Maintenance" Target="AUTO" Default="1" Mode="" Description="1 = Yes &amp;lt;/br&amp;gt;&#13;&#10;0 = No &amp;lt;/br&amp;gt;&#13;&#10;Automatically updates server/oxide and manages wipes.  &amp;lt;/br&amp;gt;&#13;&#10;Will notify players before update happens. " Type="Variable" Display="always" Required="true" Mask="false">1</Config>
+  <Config Name="Auto Wipe" Target="WIPEDAYS" Default="" Mode="" Description="Leave (BLANK) for no server wipes.  &amp;lt;/br&amp;gt;&#13;&#10;Enter the amount of days until server wipes. &amp;lt;/br&amp;gt;&#13;&#10;Example.. 7 will wipe the server 7 days after the map was created. &amp;lt;/br&amp;gt;&#13;&#10;Players will be notified before wipe. " Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Wipe Date On Title" Target="WIPE_TITLE" Default="0" Mode="" Description="1 = Enabled &amp;lt;/br&amp;gt;&#13;&#10;0 = Disabled &amp;lt;/br&amp;gt;&#13;&#10;Will show the the server wiped date in the server name. " Type="Variable" Display="always" Required="true" Mask="false">0</Config>
   <Config Name="Oxide Plugin" Target="OXIDE" Default="0" Mode="" Description="1 = Enabled &amp;lt;/br&amp;gt;&#13;&#10;0 = Disable &amp;lt;/br&amp;gt; &#13;&#10;Be able to install plugins from Oxide. " Type="Variable" Display="always" Required="true" Mask="false">0</Config>
   <Config Name="Performance" Target="PERFORMANCE" Default="1" Mode="" Description="1 = Resource Friendly (Optimized)  &amp;lt;/br&amp;gt;&#13;&#10;2 = Original (Rust Default Settings) &amp;lt;/br&amp;gt;&#13;&#10;3 = Competitive (Resource Gobbler)" Type="Variable" Display="always" Required="true" Mask="false">1</Config>
   <Config Name="Server Release" Target="RELEASE" Default="public" Mode="" Description="public = (Latest update)  &amp;lt;/br&amp;gt;&#13;&#10;prerelease = (Under development)" Type="Variable" Display="always" Required="true" Mask="false">public</Config>
@@ -219,15 +224,11 @@ Enable option to show wioed date in server title.  &#xD;
   <Config Name="Map Size" Target="MAPSIZE" Default="medium" Mode="" Description="tiny | small &amp;lt;/br&amp;gt;&#13;&#10;medium | large &amp;lt;/br&amp;gt;&#13;&#10;massive" Type="Variable" Display="always" Required="true" Mask="false">medium</Config>
   <Config Name="Rcon Password" Target="PASSWORD" Default="changeme" Mode="" Description="Password to access Rcon (Remote Console) &amp;lt;/br&amp;gt;&#13;&#10;Leave blank for unsecure login (Not Recommended) " Type="Variable" Display="always" Required="false" Mask="false">server</Config>
   <Config Name="(ADVANCED) Extra Startup Arguments" Target="ARGUMENTS" Default="" Mode="" Description="Extra rust arguments to be applied when starting up server. " Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="PVE" Target="PVE" Default="0" Mode="" Description="1 = Enabled  (Player Vs Entities) &amp;lt;/br&amp;gt;&#13;&#10;0 = Disabled (Player Vs Player) " Type="Variable" Display="always" Required="true" Mask="false">0</Config>
-  <Config Name="Auto Wipe" Target="WIPEDAYS" Default="" Mode="" Description="Leave (BLANK) for no server wipes.  &amp;lt;/br&amp;gt;&#13;&#10;Enter the amount of days until server wipes. &amp;lt;/br&amp;gt;&#13;&#10;Example.. 7 will wipe the server 7 days after the map was created. &amp;lt;/br&amp;gt;&#13;&#10;Players will be notified before wipe. " Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="Wipe Date On Title" Target="WIPE_TITLE" Default="0" Mode="" Description="1 = Enabled &amp;lt;/br&amp;gt;&#13;&#10;0 = Disabled &amp;lt;/br&amp;gt;&#13;&#10;Will show the the server wiped date in the server name. " Type="Variable" Display="always" Required="true" Mask="false">0</Config>
   <Config Name="Announce 1" Target="ANNOUNCE1" Default="" Mode="" Description="Leave BLANK to disable announcements.  &amp;lt;/br&amp;gt;&#13;&#10;Enter announcement in order 1-5. &amp;lt;/br&amp;gt;&#13;&#10;Not all announcements must be filled. &amp;lt;/br&amp;gt;&#13;&#10;Can use things like.. &amp;lt;color=red&amp;gt;NOTICE:&amp;lt;/color&amp;gt; hello world. " Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Announce 2" Target="ANNOUNCE2" Default="" Mode="" Description="ANNOUNCEMENT 2" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Announce 3" Target="ANNOUNCE3" Default="" Mode="" Description="ANNOUNCEMENT 3" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Announce 4" Target="ANNOUNCE4" Default="" Mode="" Description="ANNOUNCEMENT 4" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Announce 5" Target="ANNOUNCE5" Default="" Mode="" Description="ANNOUNCEMENT 5" Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="Rcon Password" Target="RUST_RCON_PASSWORD" Default="changeme" Mode="" Description="Password to access Rcon (Remote Console) &amp;lt;/br&amp;gt;&#13;&#10;Leave blank for unsecure login (Not Recommended) " Type="Variable" Display="always" Required="false" Mask="false">changeme</Config>
   <Config Name="Rust Server Directory" Target="/steamcmd/rust" Default="/mnt/user/appdata/Rust-Server/" Mode="rw" Description="Mapping Directory" Type="Path" Display="advanced" Required="false" Mask="false">/mnt/user/appdata/Rust-Server/</Config>
   <Config Name="Web Port" Target="8080" Default="8080" Mode="tcp" Description="Web host for Rcon" Type="Port" Display="advanced" Required="true" Mask="false">8080</Config>
   <Config Name="Rcon Port" Target="28016" Default="28016" Mode="tcp" Description="Container Port: " Type="Port" Display="advanced" Required="true" Mask="false">28016</Config>
