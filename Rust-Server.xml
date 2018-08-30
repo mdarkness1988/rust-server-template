@@ -15,7 +15,7 @@ Automatic updating system with wipe.  [br] &#xD;
 Auto Port forwarding (UPnP).  [br] &#xD;
 Simple Template for faster setup (Great for newbies).  &#xD;
 Auto announcements, upto 5 messages to set.  &#xD;
-Enable option to show wioed date in server title.  &#xD;
+Enable option to show wiped date in server title.  &#xD;
 &#xD;
  &#xD;
 </Overview>
@@ -35,7 +35,7 @@ Automatic updating system.  [br] &#xD;
 Auto Port forwarding (UPnP).  [br] &#xD;
 Simple Template for faster setup (Great for newbies).  &#xD;
 Auto announcements, upto 5 messages to set.  &#xD;
-Enable option to show wioed date in server title.  &#xD;
+Enable option to show wiped date in server title.  &#xD;
 &#xD;
  &#xD;
 </Description>
@@ -224,7 +224,7 @@ Enable option to show wioed date in server title.  &#xD;
   <Config Name="Map Size" Target="MAPSIZE" Default="medium" Mode="" Description="tiny | small &amp;lt;/br&amp;gt;&#13;&#10;medium | large &amp;lt;/br&amp;gt;&#13;&#10;massive" Type="Variable" Display="always" Required="true" Mask="false">medium</Config>
   <Config Name="Rcon Password" Target="PASSWORD" Default="changeme" Mode="" Description="Password to access Rcon (Remote Console) &amp;lt;/br&amp;gt;&#13;&#10;Leave blank for unsecure login (Not Recommended) " Type="Variable" Display="always" Required="false" Mask="false">server</Config>
   <Config Name="(ADVANCED) Extra Startup Arguments" Target="ARGUMENTS" Default="" Mode="" Description="Extra rust arguments to be applied when starting up server. " Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="Announce 1" Target="ANNOUNCE1" Default="" Mode="" Description="Leave BLANK to disable announcements.  &amp;lt;/br&amp;gt;&#13;&#10;Enter announcement in order 1-5. &amp;lt;/br&amp;gt;&#13;&#10;Not all announcements must be filled. &amp;lt;/br&amp;gt;&#13;&#10;Can use things like.. &amp;lt;color=red&amp;gt;NOTICE:&amp;lt;/color&amp;gt; hello world. " Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Announce 1" Target="ANNOUNCE1" Default="" Mode="" Description="Leave BLANK to disable announcements.  &amp;lt;/br&amp;gt;&#13;&#10;Enter announcement in order 1-5. &amp;lt;/br&amp;gt;&#13;&#10;Not all announcements must be filled " Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Announce 2" Target="ANNOUNCE2" Default="" Mode="" Description="ANNOUNCEMENT 2" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Announce 3" Target="ANNOUNCE3" Default="" Mode="" Description="ANNOUNCEMENT 3" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Announce 4" Target="ANNOUNCE4" Default="" Mode="" Description="ANNOUNCEMENT 4" Type="Variable" Display="always" Required="false" Mask="false"/>
