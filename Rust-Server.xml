@@ -19,7 +19,7 @@ Enable option to show wiped date in server title.  &#xD;
 &#xD;
  &#xD;
 </Overview>
-  <Category>Other: Network:Other</Category>
+  <Category>GameServers:</Category>
   <WebUI>http://[IP]:[PORT:8080]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/mdarkness1988/rust-server-template/master/Rust-Server.xml</TemplateURL>
   <Icon>https://orig00.deviantart.net/f0bf/f/2014/018/9/6/rust___icon_by_blagoicons-d72pie6.png</Icon>
